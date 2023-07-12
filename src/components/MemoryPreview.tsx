@@ -15,7 +15,7 @@ export default function MemoryPreviewComponent({ memory }: MemoryPreviewProps) {
   return (
     <div key={memory.id} className="space-y-4">
       <time className="-ml-8 flex items-center gap-2 text-sm before:h-px before:w-5 before:bg-gray-400">
-        {dayjs(memory.createdAt).format('D[ de ] MMMM[, ] YYYY')}
+        {dayjs(memory.date).format('D[ de ] MMMM[, ] YYYY')}
       </time>
 
       {memory.coverUrl && (

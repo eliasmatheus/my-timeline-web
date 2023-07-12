@@ -1,12 +1,10 @@
 import { ReactNode } from 'react';
-import { cookies } from 'next/headers';
 
 import './globals.css';
 import { Lora, Oswald } from 'next/font/google';
 import Hero from '@/components/Hero';
-import Profile from '@/components/Profile';
-import SignIn from '@/components/SignIn';
 import { Copyright } from '@/components/Copyright';
+import { Header } from '@/components/header/Header';
 
 const lora = Lora({
   subsets: ['latin'],
@@ -20,14 +18,12 @@ const oswald = Oswald({
 });
 
 export const metadata = {
-  title: 'NLW Spacetime',
+  title: 'remember',
   description:
-    'Uma cápsula do tempo construída React, Next.js, TailwindCSS e Typescript',
+    'Uma linha do tempo pessoal construída React, Next.js, TailwindCSS e Typescript',
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
-  const isAuthenticated = cookies().has('token');
-
   return (
     <html lang="en">
       <body
@@ -35,14 +31,14 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       >
         <main className="grid min-h-screen grid-cols-2">
           {/* Left */}
-          <div className="relative flex flex-1 flex-col items-start justify-between overflow-hidden border-r border-white/10 bg-white px-28 py-16">
+          <div className="relative flex flex-1 flex-col items-start justify-between overflow-hidden border-r border-slate-950/10 bg-white px-12 py-12 xl:px-28">
             {/* Blur */}
             {/* <div className="absolute right-0 top-1/2 h-[288px] w-[526px] -translate-y-1/2 translate-x-1/2 rounded-full bg-purple-700 opacity-50 blur-full" /> */}
 
             {/* Stripes */}
             <div className="absolute bottom-0 right-2 top-0 w-2  bg-stripes" />
 
-            {isAuthenticated ? <Profile /> : <SignIn />}
+            <Header />
 
             <Hero />
 

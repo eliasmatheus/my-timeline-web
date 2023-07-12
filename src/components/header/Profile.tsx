@@ -5,7 +5,7 @@ function Profile() {
   const { name, avatarUrl } = getUser();
 
   return (
-    <div className="flex items-center gap-3 text-left">
+    <div className="flex items-center gap-2 text-left">
       <Image
         src={avatarUrl}
         width={40}

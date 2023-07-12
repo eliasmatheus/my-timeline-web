@@ -16,7 +16,7 @@ export function MemoryComponent({ memory }: MemoryProps) {
         <div className="w-full space-y-4">
           <div className="flex justify-between">
             <time className="flex items-center gap-2 text-sm">
-              {dayjs(memory.createdAt).format('D[ de ] MMMM[, ] YYYY')}
+              {dayjs(memory.date).format('D[ de ] MMMM[, ] YYYY')}
             </time>
 
             <div className="flex gap-2">
@@ -29,7 +29,7 @@ export function MemoryComponent({ memory }: MemoryProps) {
 
               <Link
                 href={`/memories/edit/${memory.id}`}
-                className="inline-block self-end rounded-full border border-blue-600 bg-blue-600 px-4 py-2 font-alt text-sm uppercase leading-none tracking-wide text-white transition-colors hover:bg-blue-700"
+                className="inline-block self-end rounded-full border border-red-600 bg-red-600 px-4 py-2 font-alt text-sm uppercase leading-none tracking-wide text-white transition-colors hover:bg-red-700"
               >
                 Editar
               </Link>
