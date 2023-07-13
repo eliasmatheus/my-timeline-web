@@ -21,7 +21,7 @@ export function MemoryComponent({ memory }: MemoryProps) {
 
             <div className="flex gap-2">
               <Link
-                href={`/memories/${memory.id}`}
+                href={`/api/memories/delete/${memory.id}`}
                 className="inline-block self-end rounded-full border border-red-600 px-4 py-2 font-alt text-sm uppercase leading-none tracking-wide text-red-600 transition-colors hover:bg-red-700  hover:text-white"
               >
                 Deletar

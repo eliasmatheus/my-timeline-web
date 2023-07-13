@@ -26,7 +26,7 @@ export default async function Home() {
   }
 
   return (
-    <div className="flex flex-col gap-10 p-8">
+    <div className="flex w-full max-w-3xl flex-col gap-10 p-8 xl:px-16">
       {memories.map((memory) => {
         return (
           <MemoryPreviewComponent

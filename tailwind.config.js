@@ -117,6 +117,10 @@ module.exports = {
       fontSize: {
         '5xl': '2.5rem',
       },
+      boxShadow: {
+        landing:
+          '0px 30px 60px -30px rgba(0, 0, 0, 0.30), 0px 4px 4px 0px rgba(50, 50, 93, 0.10), 0px 1px 1px 0px rgba(0, 0, 0, 0.10) inset;',
+      },
     },
   },
   plugins: [require('@tailwindcss/forms')],

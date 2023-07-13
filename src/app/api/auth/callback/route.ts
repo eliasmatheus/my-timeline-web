@@ -1,5 +1,6 @@
 import { api } from '@/lib/api';
 import { NextRequest, NextResponse } from 'next/server';
+// ?code=1234567890
 
 export async function GET(req: NextRequest) {
   const { searchParams } = new URL(req.url);
