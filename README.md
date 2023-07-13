@@ -83,7 +83,7 @@ Após criado, seu _Client ID_ estará disponível na página do seu OAuth App. C
 NEXT_PUBLIC_GITHUB_CLIENT_ID=cole-aqui-o-client-id
 ```
 
-A variável `NEXT_PUBLIC_API_URL` já vem preenchida com o endereço da API do backend. Por padrão, a API roda na porta `3333`:
+A variável `NEXT_PUBLIC_API_URL` já vem preenchida com o endereço da API do backend rodando na porta `3333`:
 
 ```bash
 NEXT_PUBLIC_API_URL=http://localhost:3333
